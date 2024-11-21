@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guia: Como Jogar Pebolim</title>
+    <style>
+        /* Estilos gerais */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f0f8ff;
+            color: #333;
+        }
+
+        /* Cabeçalho */
+        header {
+            background: linear-gradient(135deg, #1e90ff, #4169e1);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        header p {
+            font-size: 1.2em;
+            margin: 5px 0 0;
+        }
+
+        /* Conteúdo principal */
+        main {
+            max-width: 900px;
+            margin: 20px auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+
+        h2 {
+            color: #1e90ff;
+            border-bottom: 2px solid #4169e1;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+        }
+
+        p {
+            line-height: 1.8;
+            margin: 15px 0;
+        }
+
+        ul {
+            list-style-type: square;
+            margin: 15px 0;
+            padding-left: 20px;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+
+        /* Estilizando imagens */
+        .image-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Seção interativa */
+        .quiz {
+            margin-top: 30px;
+        }
+
+        .quiz-question {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .quiz-options {
+            margin-bottom: 20px;
+        }
+
+        .quiz-options button {
+            display: block;
+            margin: 10px 0;
+            padding: 10px 15px;
+            font-size: 1em;
+            background: #1e90ff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .quiz-options button:hover {
+            background: #4169e1;
+        }
+
+        .quiz-result {
+            font-weight: bold;
+            color: #1e90ff;
+            margin-top: 10px;
+        }
+
+        /* Rodapé */
+        footer {
+            text-align: center;
+            background: #1e90ff;
+            color: white;
+            padding: 15px 0;
+            margin-top: 20px;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 1em;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Guia: Como Jogar Pebolim</h1>
+        <p>Aprenda as regras, dicas e truques para se tornar um mestre!</p>
+    </header>
+    <main>
+        <h2>O que é Pebolim?</h2>
+        <p>
+            Pebolim, ou totó, é um jogo de mesa competitivo e divertido. 
+            Os jogadores controlam bonecos presos em barras giratórias, com o objetivo de marcar gols no adversário. 
+            É popular em todo o mundo e pode ser jogado casualmente ou em competições profissionais.
+        </p>
+
+        <div class="image-container">
+            <img src="https://via.placeholder.com/800x400?text=Mesa+de+Pebolim" alt="Mesa de Pebolim">
+        </div>
+
+        <h2>Curiosidades</h2>
+        <ul>
+            <li>O pebolim foi inventado na Europa no início do século XX.</li>
+            <li>Existem competições internacionais, como a Copa do Mundo de Pebolim.</li>
+            <li>Jogadores profissionais treinam habilidades como controle da bola e estratégia defensiva.</li>
+        </ul>
+
+        <h2>Teste Seu Conhecimento!</h2>
+        <div class="quiz">
+            <div class="quiz-question">Qual é a regra principal para girar as barras no pebolim?</div>
+            <div class="quiz-options">
+                <button onclick="checkAnswer(false)">Pode girar livremente, sem limites</button>
+                <button onclick="checkAnswer(true)">Não pode girar mais de 360 graus</button>
+                <button onclick="checkAnswer(false)">Pode girar até duas vezes seguidas</button>
+                <button onclick="checkAnswer(false)">Pode girar com força máxima</button>
+            </div>
+            <div id="quiz-result" class="quiz-result"></div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Guia Pebolim. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        function checkAnswer(isCorrect) {
+            const result = document.getElementById('quiz-result');
+            if (isCorrect) {
+                result.textContent = "Parabéns! Você acertou!";
+                result.style.color = "green";
+            } else {
+                result.textContent = "Ops! Tente novamente.";
+                result.style.color = "red";
+            }
+        }
+    </script>
+</body>
+</html>
